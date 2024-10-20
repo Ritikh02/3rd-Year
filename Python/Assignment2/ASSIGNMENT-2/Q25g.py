@@ -1,5 +1,5 @@
-# Question 7: Print a repeating numerical pattern with increasing repetition.
-for i in range(1, 10, 2):
-    for j in range(i):
-        print(i, end="")
-    print()
+# Question 7: Print a pattern
+n = 5
+for i in range(1, n):
+    print(' ' * (n - i) + '*' + ' ' * (2 * (i - 1) - 1) + ('*' if i > 1 else ''))
+print('*' * (2 * n - 1))

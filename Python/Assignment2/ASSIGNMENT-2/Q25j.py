@@ -1,8 +1,6 @@
-# Question 10: Print a pattern of alphabets in a triangular shape.
-n = 65
-for i in range(6):
-    for j in range(i + 1):
-        ch = chr(n)
-        print(ch, end=" ")
-        n += 1
+# Question 10: Print a pattern 
+n = 5
+for i in range(n, -1, -1):
+    for j in range(i+1):
+        print(j, end=" ")
     print()

@@ -1,9 +1,7 @@
-# Question 9: Print a numerical pattern forming an inverted pyramid with 1 at the top.
-for i in range(5, 0, -1):
-    for j in range(5 - i):
-        print(" ", end="")
-    for j in range(i, 0, -1):
-        print(j, end="")
-    for j in range(2, i + 1):
-        print(j, end="")
-    print()
+# Question 9: Print a pattern
+n = 5
+for i in range(n):
+    if i == 0 or i == n-1:
+        print('* ' * n)
+    else:
+        print('*' + ' ' * (2 * n - 3) + '*')
