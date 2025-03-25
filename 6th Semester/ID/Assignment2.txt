@@ -1,0 +1,61 @@
+a) Display the structure of all tables
+SHOW TABLES;
+DESCRIBE table_name;  
+
+ b) Display the contents of all tables
+SELECT * FROM table_name;  
+
+ c) Display the name and department of each instructor
+SELECT name, department FROM instructor;
+
+ d) Display the name and salary of Comp. Sci. Instructors
+SELECT name, salary FROM instructor WHERE department = 'Comp. Sci.';
+
+ e) Display instructors from Physics department with salary < 90000
+SELECT * FROM instructor WHERE department = 'Physics' AND salary < 90000;
+
+ f) Display instructors who do not belong to Comp. Sci. Department
+SELECT name FROM instructor WHERE department <> 'Comp. Sci.';
+
+ g) Display distinct department names in the instructor table
+SELECT DISTINCT department FROM instructor;
+
+ h) Display all Course_id’s taught in Spring semester of 2009
+SELECT Course_id FROM course WHERE semester = 'Spring' AND year = 2009;
+
+ i) Display course titles taught in Comp. Sci. and credit not equal to 3
+SELECT title FROM course WHERE department = 'Comp. Sci.' AND credit != 3;
+
+ j) Display all columns of course table sorted in descending order of department names
+SELECT * FROM course ORDER BY department DESC;
+
+ k) Add a date_of_join column to instructor table
+ALTER TABLE instructor ADD date_of_join DATE;
+
+ l) Insert date values into existing rows
+UPDATE instructor SET date_of_join = '2025-06-11' WHERE id = 1;
+
+ m) Change the name of dept_name to department in all tables
+ALTER TABLE instructor CHANGE dept_name department VARCHAR(50);
+ALTER TABLE course CHANGE dept_name department VARCHAR(50);
+
+ n) Rename "Prereq" table to "Prerequired"
+RENAME TABLE Prereq TO Prerequired;
+
+ o) Change Course_id column name to Sub_code
+ALTER TABLE course CHANGE Course_id Sub_code VARCHAR(20);
+
+ p) Change the data type of name to VARCHAR(50)
+ALTER TABLE instructor MODIFY name VARCHAR(50);
+
+ q) Rename Instructor table to Faculty_Info
+RENAME TABLE instructor TO Faculty_Info;
+
+ r) Change column size of Course_id in Course table from 10 to 8
+ALTER TABLE course MODIFY Course_id VARCHAR(8);
+
+ s) Delete content of Prereq table
+DELETE FROM Prereq;
+
+ t) Change column name ‘Building’ to ‘Builder’ in Department table
+ALTER TABLE department CHANGE Building Builder VARCHAR(50);
